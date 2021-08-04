@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./app-hp:/usr/src/app
-    command: npm run start
+      - ./:/usr/src/app
+    command: sh -c "cd app-hp && npm run dev"
     ports:
       - "3000:3000"
